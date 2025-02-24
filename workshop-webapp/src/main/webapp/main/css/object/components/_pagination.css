@@ -1,0 +1,16 @@
+.c-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.c-pagination li {
+  text-align: center;
+  width: 25px;
+  height: 25px;
+  border: 0.5px solid white;
+  background-color: white;
+  color: black;
+}
+.c-pagination li:not(:last-child) {
+  margin-right: 10px;
+}

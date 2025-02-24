@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login_style.css">
+    <title>ログイン画面</title>
+</head>
+<body>
+    <div class="main-contents">
+        <div class="box-line">
+            <div class="login-section">
+                <img class="reach-logo" src="../../images/Reach-logo.png" alt="Logo">
+                <form id="login-form">
+                    <div class="textbox">
+                        <input id="user-id-textbox" type="text" placeholder="ユーザー名を入力してください">
+                    </div>
+                    <div class="textbox">
+                        <input id="password-textbox" type="password" placeholder="パスワードを入力してください">
+                    </div>
+                    <div class="button">
+                        <button id="signin-btn" type="submit">ログイン</button>
+                    </div>
+                </form>
+                <div class="text-container1">
+                    <p class="text1">または</p>
+                </div>
+                <div class="text-container2">
+                    <p class="text2">アカウントをお持ちでないですか？</p>
+                    <a href="../../userRegister/html/userRegister.html" id="signupScreen-btn" class="link">登録</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/login.js"></script> <!-- JavaScriptファイルのパスを修正 -->
+</body>
+</html>
