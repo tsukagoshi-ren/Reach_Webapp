@@ -15,6 +15,7 @@
 
 ---
 
+```plaintext
 ─workshop-webapp
     ├─.settings
     ├─src
@@ -31,7 +32,7 @@
     │     │          │  └─utils
     │     │          └─userRegister
     │     ├─resources
-    │     └─webapp　//　フロント側のソースを画面ごとに分割
+    │     └─webapp // フロント側のソースを画面ごとに分割
     │         ├─images
     │         ├─login
     │         │  ├─css
@@ -68,9 +69,3 @@
         │      └─testCompile
         │          └─default-testCompile
         └─test-classes
-
-
----
-
-**注意:**  
-mastarブランチでは作業せず、新しくブランチを切ってから作業を進めてください。
