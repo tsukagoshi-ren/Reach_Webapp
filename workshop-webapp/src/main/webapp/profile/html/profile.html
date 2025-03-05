@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@3.0.2/destyle.css">
+  <link rel="stylesheet" href="../css/profile.css">
+  <title>プロフィール画面</title>
+</head>
+<body>
+
+  <div class="wrapper">
+
+    <div class="sidebar">
+      <img class="reach-logo" src="../../images/Reach-logo.png" alt="">
+      <ul class="sidebar_menu">
+        <li><a href="/html/main.html">ホーム</a></li>
+        <li><a href="/html/posts_new.html">投稿</a></li>
+      </ul>
+      <div class="sidebar_profile">
+        <img class="sidebar_profileImage" src="../../images/profile.png" alt="">
+        <button class="sidebar_profileUserText" onclick="profileRequest()">プロフィール</button>
+      </div>
+    </div>
+
+    <div class="main">
+
+      <div class="profile">
+        <img class="profile_image" src="../../images/profile.png" alt=""> 
+        <div class="profilebox">
+          <span class="post_formUser_id">ユーザーID</span>
+          <button id="profileEdit-btn" type="submit" onclick="profileEditRequest()">編集</button>
+        </div>
+      </div>
+
+      <div class="profile_edit">
+
+        <label for="profileImageUpload">
+          <img src="uploadIcon.png" alt="アイコン" id="uploadButton">
+        </label>
+        <input type="file" id="profileImageUpload" name="newProfileImage" accept="image/*" hidden>
+
+        <input id="user-id-textbox" type="text" name="userId" placeholder="ユーザーID" >
+        <div>
+          <button id="profileEdit-cancelBtn" type="submit" onclick="cancelEditRequest()">キャンセル</button>
+          <button id="profileEdit-adaptBtn" type="submit" onclick="adaptEditRequest()">適応</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
