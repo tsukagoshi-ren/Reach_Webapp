@@ -19,7 +19,7 @@ public class MainService {
     private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 
     public User getUserProfile(String userId) {
-        String sql = "SELECT user_id, password, profile_picture FROM public.\"USER_INFO\" WHERE user_id = :userId";
+        String sql = "SELECT user_id, password, profile_picture FROM public.\"user_info\" WHERE user_id = :userId";
         MapSqlParameterSource params = new MapSqlParameterSource();
         params.addValue("userId", userId);
 
@@ -36,7 +36,7 @@ public class MainService {
     }
 
     public List<Post> getAllPosts() {
-        String sql = "SELECT post_id, post_user, post_picture, post_text, good_count, post_time FROM public.\"POST_INFO\"";
+        String sql = "SELECT post_id, post_user, post_picture, post_text, good_count, post_time FROM public.\"post_info\"";
         return namedParameterJdbcTemplate.query(sql, new RowMapper<Post>() {
             @Override
             public Post mapRow(ResultSet rs, int rowNum) throws SQLException {

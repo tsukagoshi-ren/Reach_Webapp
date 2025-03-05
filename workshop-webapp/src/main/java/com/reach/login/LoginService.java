@@ -17,7 +17,7 @@ public class LoginService {
     private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 
     public User findUserByIdAndPassword(String userId, String password) {
-        String sql = "SELECT user_id, password, profile_picture FROM public.\"USER_INFO\" WHERE user_id = :userId AND password = :password";
+        String sql = "SELECT user_id, password, profile_picture FROM public.\"user_info\" WHERE user_id = :userId AND password = :password";
         MapSqlParameterSource params = new MapSqlParameterSource();
         params.addValue("userId", userId);
         params.addValue("password", password);
