@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="expires" content="604800">
+  <meta name="format-detection" content="email=no,telephone=no,address=no">
+  <title>投稿作成</title>
+  <link rel="stylesheet" href="../css/app.css"> <!-- パスを修正 -->
+  <script src="../js/post.js" defer></script> <!-- パスを修正 -->
+</head>
+<body>
+  <div class="l-wrapper">
+    <div class="l-sidebar">
+      <img class="l-sidebar__logo" src="../../images/Reach-logo.png" alt="">
+      <ul>
+        <li><a href="../../main/html/main.html">ホーム</a></li> <!-- パスを修正 -->
+        <li><a href="../html/posts_new.html">投稿作成</a></li> <!-- パスを修正 -->
+      </ul>
+      <div class="l-sidebar__profile">
+        <img class="l-sidebar__profileImage" src="../../images/profile.png" alt="">
+        <p>プロフィール</p>
+      </div>
+    </div>
+    <div class="l-main">
+      <div class="p-post">
+        <div class="p-post__form">
+          <div class="p-post__formUser">
+            <img class="p-post__formUser__image" src="../../images/profile.png" alt="ユーザープロフィール画像">
+            <span class="p-post__formUser__id">ユーザーID</span>
+          </div>
+          <form action="your-upload-endpoint" method="post">
+            <div class="p-post__formImage">
+              <label for="image-upload">画像を添付</label>
+              <input type="file" id="image-upload" name="image">
+            </div>
+            <div class="p-post__formText">
+              <textarea id="post-text" name="post-text" placeholder="ここにテキストを入力"></textarea>
+            </div>
+            <div class="p-post__formButtons">
+              <input type="reset" value="キャンセル">
+              <button type="submit">投稿する</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
