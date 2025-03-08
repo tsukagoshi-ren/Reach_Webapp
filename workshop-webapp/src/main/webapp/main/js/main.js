@@ -1,3 +1,4 @@
+//メイン画面初期表示
 document.addEventListener("DOMContentLoaded", function() {
     // プロフィール画像を取得して表示
     fetch("/profile")
