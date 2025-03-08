@@ -1,4 +1,3 @@
-//メイン画面初期表示
 document.addEventListener("DOMContentLoaded", function() {
     // プロフィール画像を取得して表示
     fetch("/profile")
@@ -8,9 +7,9 @@ document.addEventListener("DOMContentLoaded", function() {
             const profileUsername = document.getElementById("profile-username");
             
             if (user.profilePicture) {
-                profileImage.src = `/workshop-webapp/src/main/webapp/images/${user.profilePicture}`;
+                profileImage.src = `../../images/${user.profilePicture}`;
             } else {
-                profileImage.src = "/workshop-webapp/src/main/webapp/images/profile.png"; // 初期表示の画像
+                profileImage.src = "../../images/profile.png"; // 初期表示の画像
             }
 
             profileUsername.textContent = user.userId; // ログインしているユーザーIDを表示
@@ -27,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 posts.forEach(post => {
                     const postElement = document.createElement("div");
                     postElement.innerHTML = `
-                        <img src="/workshop-webapp/src/main/webapp/images/${post.postPicture}" alt="Post Image" width="200">
+                        <img src="../../images/${post.postPicture}" alt="Post Image" width="200">
                         <p>${post.postText}</p>
                         <p>${new Date(post.postTime).toLocaleString()}</p>
                         <p>いいね: ${post.goodCount}</p>
