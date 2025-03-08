@@ -13,7 +13,7 @@ public class UserRegisterService {
     private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 
     public boolean registerUser(User user) {
-        String sql = "INSERT INTO public.\"USER_INFO\" (user_id, password) VALUES (:userId, :password)";
+        String sql = "INSERT INTO public.USER_INFO (user_id, password) VALUES (:userId, :password)";
         MapSqlParameterSource params = new MapSqlParameterSource();
         params.addValue("userId", user.getUserId());
         params.addValue("password", user.getPassword());
