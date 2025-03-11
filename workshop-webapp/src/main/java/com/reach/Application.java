@@ -23,9 +23,9 @@ public class Application {
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("org.postgresql.Driver");
-        dataSource.setUrl("jdbc:postgresql://localhost:5432/postgres"); // postgresのデフォルトパス：5432
-        dataSource.setUsername("postgres"); // PgAdminで設定したログインID（デフォルト：postgres）
-        dataSource.setPassword("tren0403"); // PgAdminで設定したパスワード
+        dataSource.setUrl("jdbc:postgresql://localhost:5432/postgres");
+        dataSource.setUsername("postgres");
+        dataSource.setPassword("tren0403");
         return dataSource;
     }
 }
