@@ -36,7 +36,11 @@ public class MainService {
     }
 
     public List<Post> getAllPosts() {
-        String sql = "SELECT post_id, post_user, post_picture, post_text, good_count, post_time FROM public.\"POST_INFO\"";
+<<<<<<< HEAD
+        String sql = "SELECT post_id, post_user, post_picture, post_text, good_count, post_time FROM public.\"post_info\"";
+=======
+        String sql = "SELECT post_id, post_user, post_picture, post_text, good_count, post_time FROM public.POST_INFO";
+>>>>>>> 2eb9e5ed92e6622cb0b8b18ed1b91d05598c6bdc
         return namedParameterJdbcTemplate.query(sql, new RowMapper<Post>() {
             @Override
             public Post mapRow(ResultSet rs, int rowNum) throws SQLException {

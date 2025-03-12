@@ -1,0 +1,32 @@
+.l-sidebar {
+  width: 20%;
+  height: 100vh;
+  position: fixed;
+  border-right: 0.5px solid white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  color: white;
+  background-color: black; 
+}
+.l-sidebar__logo {
+  margin-bottom: 40px;
+}
+.l-sidebar ul {
+  list-style: none;
+  flex-grow: 1;
+  text-align: left; 
+}
+.l-sidebar li:first-child {
+  margin-bottom: 20px; 
+}
+.l-sidebar__profile {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.l-sidebar__profileImage {
+  margin-right: 8px;
+}
+
