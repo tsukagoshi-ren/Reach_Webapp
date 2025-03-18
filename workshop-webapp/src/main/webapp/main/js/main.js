@@ -1,18 +1,23 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // プロフィール画像を取得して表示
     fetch("/profile")
         .then(response => response.json())
         .then(user => {
             const profileImage = document.getElementById("profile-image");
             const profileUsername = document.getElementById("profile-username");
-            
+
             if (user.profilePicture) {
-                profileImage.src = `../../images/${user.profilePicture}`;
+                // 空白を削除したユーザーIDでパスを構成
+                const trimmedUserId = user.userId.trim(); // 空白を削除
+                profileImage.src = `/images/profileImages/${trimmedUserId}/${user.profilePicture}`;
             } else {
-                profileImage.src = "../../images/profile.png"; // 初期表示の画像
+                profileImage.src = "../../images/default-profile.png"; // デフォルト画像
             }
 
-            profileUsername.textContent = user.userId; // ログインしているユーザーIDを表示
+            // 空白を削除してユーザーIDを表示
+            profileUsername.textContent = user.userId.trim();
+        })
+        .catch(error => {
+            console.error("プロフィール情報の取得に失敗しました:", error);
         });
 
     // 投稿情報を取得して表示
@@ -21,20 +26,33 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(posts => {
             const postsContainer = document.getElementById("posts");
             const noPostsMessage = document.getElementById("no-posts-message");
+
             if (posts.length > 0) {
                 noPostsMessage.style.display = "none";
                 posts.forEach(post => {
                     const postElement = document.createElement("div");
+                    
                     postElement.innerHTML = `
-                        <img src="../../images/${post.postPicture}" alt="Post Image" width="200">
-                        <p>${post.postText}</p>
-                        <p>${new Date(post.postTime).toLocaleString()}</p>
-                        <p>いいね: ${post.goodCount}</p>
+						<div class="p-post">
+						    <div class="p-post__listUser">
+						        <div class="p-post__listUser__name">投稿者: ${post.postUser}</div>
+						        <p>${new Date(post.postTime).toLocaleString()}</p>
+						    </div>
+						    <img class="p-post__listProfile" src="/images/postImages/${post.postUser}/${post.postPicture}" alt="Post Image">
+						    <div class="p-post__listLike">
+						        <img class="like-button" src="../../images/like.png" alt="いいね" width="30" height="30">
+						        <span class="like-count">${post.goodCount}</span>
+						    </div>
+						</div>
                     `;
                     postsContainer.appendChild(postElement);
                 });
+                  setupLikeButtons();
             } else {
                 noPostsMessage.style.display = "block";
             }
+        })
+        .catch(error => {
+            console.error("投稿データの取得に失敗しました:", error);
         });
 });

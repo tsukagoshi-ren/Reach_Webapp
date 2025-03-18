@@ -9,10 +9,11 @@
     <title>メインページ</title>
     <meta name="description" content="【カリキュラム番号】| 【カリキュラム名】のdescriptionです">
     <link rel="stylesheet" href="../css/app.css">
+    <link rel="stylesheet" href="../css/profile.css">
     <script src="../js/main.js" defer></script>
     <script src="../js/like.js" defer></script>
-    <script src="../js/pagination.js" defer></script>
-    <script src="../js/post.js" defer></script>
+<!--    <script src="../js/pagination.js" defer></script>-->
+<!--    <script src="../js/post.js" defer></script>-->
 </head>
 <body>
     <div class="l-wrapper">
@@ -20,12 +21,16 @@
             <img class="l-sidebar__logo" src="../../images/Reach-logo.png" alt="">
             <ul>
                 <li><a href="main.html">ホーム</a></li>
-                <li><a href="../../posts_new/html/posts_new.html">投稿作成</a></li> <!-- パスを修正 -->
+                <li><a href="../../posts_new/html/posts_new.html">投稿作成</a></li>
             </ul>
-            <div class="l-sidebar__profile">
-                <img id="profile-image" class="l-sidebar__profileImage" src="../../images/default-profile.png" alt="Profile Image">
-                <p id="profile-username">プロフィール</p>
-            </div>
+			<div class="l-sidebar__profile-container">
+			    <div class="l-sidebar__profile profileImage">
+			        <img id="profile-image" class="l-sidebar__profileImage" src="../../images/default-profile.png" alt="Profile Image">
+			    </div>
+			    <div class="l-sidebar__profile profileUserId">
+			        <p id="profile-username">プロフィール</p>
+			    </div>
+			</div>
         </div>
         <div class="l-main">
             <div id="posts">
