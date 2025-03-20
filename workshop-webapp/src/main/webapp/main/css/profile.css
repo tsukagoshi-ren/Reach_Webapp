@@ -1,0 +1,60 @@
+.l-sidebar__profile-container {
+    display: flex; /* 横並びにする */
+    align-items: center; /* 縦方向の位置を揃える */
+    gap: 10px; /* 要素間のスペースを指定 */
+}
+
+.l-sidebar__profile {
+    display: flex; /* 子要素を扱いやすくするために設定（オプション） */
+    align-items: center; /* 子要素を中央揃え */
+}
+
+.l-sidebar__profileImage {
+    width: 50px; /* 画像の幅 */
+    height: 50px; /* 画像の高さ */
+    border-radius: 50%; /* 画像を丸くする（オプション） */
+    object-fit: cover;
+}
+
+#profile-username {
+    margin: 0; /* 不要な余白を削除 */
+}
+/* 全体を白線で囲む */
+.p-post {
+    border: 1px solid white; /* 白線で囲む */
+    padding: 15px; /* 内部余白を調整 */
+    background-color: rgb(0, 0, 0); /* 背景色を黒に設定 */
+    max-width: 80%; /* 最大幅を設定 */
+    margin: 20px auto; /* 中央揃え */
+    display: flex;
+    flex-direction: column; /* 縦並びにする */
+    gap: 10px; /* 各要素間のスペース */
+}
+
+/* 投稿者名と投稿時間を横並びにし、間隔を狭める */
+.p-post__listUser {
+    display: flex; /* 横並びに配置 */
+    align-items: center; /* 縦方向を中央揃え */
+    gap: 5px; /* 要素間のスペースを縮小 */
+    font-size: 14px; /* テキストサイズを調整 */
+    color: rgb(255, 255, 255); /* テキスト色を白に設定 */
+}
+
+/* 投稿画像のサイズを適切に調整 */
+.p-post__listProfile {
+    display: block;
+    max-width: 100%; /* 親要素の幅に収める */
+    height: auto; /* アスペクト比を維持 */
+    max-height: 300px; /* 最大高さを設定してサイズ制限 */
+    border-radius: 8px; /* 画像の角を丸くする */
+    margin: 0 auto; /* 中央揃え */
+}
+
+/* いいねボタンとカウントを横並びで配置 */
+.p-post__listLike {
+    display: flex; /* 横並びに配置 */
+    align-items: center; /* 縦方向を中央揃え */
+    gap: 5px; /* ボタンとカウント間のスペース */
+    font-size: 14px; /* テキストサイズを調整 */
+    color: rgb(255, 255, 255); /* テキストを白に設定 */
+}

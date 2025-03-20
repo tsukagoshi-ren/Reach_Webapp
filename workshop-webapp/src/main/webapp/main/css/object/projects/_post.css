@@ -1,15 +1,12 @@
 .p-post {
   padding: 30px;
+  border: 0.5px solid white;
   margin-bottom: 20px;
-  display: flex;
-  color: white;
 }
 /* 投稿一覧 */
 .p-post__list {
-  margin-right: 40px;
-  padding: 30px;
-  width: 650px;
-  border: 0.5px solid rgba(255, 255, 255, 0.354);
+  display: flex;
+  flex-direction: column;
 }
 .p-post__list:not(:last-child) {
   margin-bottom: 20px;
@@ -22,29 +19,34 @@
 .p-post__listUser__image {
   margin-right: 8px;
 }
-.p-post__listImage {
-  margin-bottom: 20px;
-}
-
 .p-post__listLike {
   display: flex;
 }
 
-.p-post__comment {
-  display: none;
-  padding: 30px;
-  border: 0.5px solid rgba(255, 255, 255, 0.354);
-} 
-
-.p-post__commentList {
-  margin-bottom: 10px;
+/* 投稿作成 */
+.p-post__form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  color: white;
 }
-.p-post__commentList h3 {
+.p-post__formUser {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.p-post__formUser__image {
+  margin-right: 8px;
+}
+.p-post__formImage {
+  margin-bottom: 30px;
+}
+.p-post__formText {
   margin-bottom: 20px;
 }
-.p-post__commentList p {
-  margin-bottom: 10px;
+.p-post__formText textarea {
+  width: 100%; 
+  height: 350px;
+  box-sizing: border-box;
 }
-.p-post__comment input {
-  margin-bottom: 10px;
-}
+
