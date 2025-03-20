@@ -1,0 +1,124 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-line{
+    /* 枠線を内側の要素に合わせる */
+    display: inline-block;
+        
+    /* 枠線内の要素：中央寄せ */
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 4px;
+    /* margin-top: 5rem; */
+}
+
+.login-section{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reach-logo{
+    /* 位置調整 */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* ロゴの大きさ */
+    width: 20rem;
+    height: auto;
+}
+
+.textbox,
+.button {
+    /* テキストボックスとボタンの位置調整 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+#user-id-textbox,
+#password-textbox,
+#signin-btn{
+    /* テキストボックス,ボタン大きさ */
+    width: 20rem;
+    height: 70px;
+}
+#user-id-textbox,
+#password-textbox{
+    /* テキストボックスのレイアウト */
+    color: black; /* テキストカラーを黒に設定 */
+    background-color: white; /* 背景色を白に設定 */
+    border: 1px solid;
+    border-radius: 4px;
+}
+
+::placeholder {
+    /* プレースホルダーテキストの色 */
+    color: #aaa; /* プレースホルダーテキストカラーをグレーに設定 */
+    font-size: 14px;
+}
+
+#signin-btn{
+    color:white;
+    background-color: rgba(89, 161, 249, 1);
+    border: 1px solid rgba(18, 18, 18, 1);
+    border-radius: 12px;
+    font-size: 35px;
+}
+
+.text-container1{
+    display: flex;
+    padding-top: 5rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.text1{
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    white-space: nowrap;
+}
+
+.text1::before,
+.text1:after {
+  background-color: white; /* 横線の色 */
+  content: "";
+  height: 1px; /* 横線の高さ */
+  width: 145px; /* 横線の長さ */
+}
+.text1::before {
+    margin-right: 70px; /* 文字との余白 */
+}
+.text1::after {
+    margin-left: 70px; /* 文字との余白 */
+}
+
+.text-container2 {
+    display: flex;
+    align-items: center;
+}
+
+.text2{
+    color: white;
+    font-size: 16px;
+}
+
+#signupScreen-btn{
+    color: rgba(89, 161, 249, 1);
+    font-size: 36px;
+}
