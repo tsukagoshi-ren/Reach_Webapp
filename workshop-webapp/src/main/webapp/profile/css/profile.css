@@ -1,72 +1,16 @@
-.clearfix::after {
-	content: "";
-	display: block;
-	clear: both;
-}
-
-.wrapper {
-	width: 1920px;
-	height: 1080px;
-	background-color: rgba(18, 18, 18, 1);
-}
-
-.sidebar {
-	float: left;
-	width: 295px;
-	height: 1080px;
-	border-right: 1px solid rgba(255, 255, 255, 1);
-}
-
-.reach_logo {
-	width: 182px;
-	height: 56px;
-	margin-top: 31px;
-	margin-left: 31px;
-}
-
-.sidebar_menu {
-	width: 233px;
-	height: 130px;
-	margin-top: 79px;
-	margin-left: 31px;
-}
-
-body>div>div.sidebar>ul>li:nth-child(1),
-body>div>div.sidebar>ul>li:nth-child(2) {
-	width: 233px;
-	height: 64px;
-	padding-left: 10px;
+.l-wrapper {
+	background-color: black;
+	width: 100%;
 	display: flex;
-	align-items: center;
-	font-size: 30px;
-	color: #ffffff;
 }
-
-.sidebar_profile {
-	width: 275px;
-	height: 64px;
-	margin-top: 694px;
-	margin-left: 20px;
+.l-main {
+	width: 80%;
+	margin-left: 20%;
+	padding: 80px;
+	color: white;
 	display: flex;
-	align-items: center;
-}
-
-#sidebar_profileImage {
-	width: 40px;
-	height: 40px;
-}
-
-#sidebar_profileUserId {
-	width: 233px;
-	height: 64px;
-	padding-left: 10px;
-	font-size: 30px;
-	color: #ffffff;
-}
-
-.main {
-	color: #ffffff;
-}
+	flex-direction: column;
+  }
 
 .profile {
 	/*    display: none;*/
@@ -77,12 +21,22 @@ body>div>div.sidebar>ul>li:nth-child(2) {
 	margin-left: 70px;
 }
 
-#profile_image {
+/* #profile_image {
 	width: 150px;
 	height: 150px;
 	margin-left: 117px;
 	margin-top: 38px;
 	float: left;
+} */
+.profile_profileImage {
+	margin-left: 117px;
+	margin-top: 38px;
+	float: left;
+    width: 150px; /* 画像の幅 */
+    height: 150px; /* 画像の高さ */
+    border-radius: 50%; /* 画像を丸くする（オプション） */
+    object-fit: cover;
+    margin-right: 8px; /* 画像とIDの間隔調整 */
 }
 
 .profilebox {

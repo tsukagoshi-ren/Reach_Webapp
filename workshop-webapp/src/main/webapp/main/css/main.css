@@ -1,24 +1,9 @@
-.l-sidebar__profile-container {
-    display: flex; /* 横並びにする */
-    align-items: center; /* 縦方向の位置を揃える */
-    gap: 10px; /* 要素間のスペースを指定 */
+.l-wrapper {
+    background-color: black;
+    width: 100%;
+    display: flex;
 }
 
-.l-sidebar__profile {
-    display: flex; /* 子要素を扱いやすくするために設定（オプション） */
-    align-items: center; /* 子要素を中央揃え */
-}
-
-.l-sidebar__profileImage {
-    width: 50px; /* 画像の幅 */
-    height: 50px; /* 画像の高さ */
-    border-radius: 50%; /* 画像を丸くする（オプション） */
-    object-fit: cover;
-}
-
-#profile-username {
-    margin: 0; /* 不要な余白を削除 */
-}
 /* 全体を白線で囲む */
 .p-post {
     border: 1px solid white; /* 白線で囲む */
