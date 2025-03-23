@@ -1,0 +1,55 @@
+/* サイドバー：全体 */
+.l-sidebar {
+    width: 20%;
+    height: 100vh;
+    position: fixed;
+    border-right: 0.5px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    color: white;
+    background-color: black; 
+}
+
+/* サイドバー：ロゴ */
+.l-sidebar__logo {
+    margin-bottom: 40px;
+}
+
+/* サイドバー：画面遷移リンク */
+.l-sidebar__link {
+    list-style: none;
+    flex-grow: 1;
+    text-align: left; 
+}
+body > div > div.l-sidebar > ul > li{
+    margin-left: 2rem;
+    margin-bottom: 20px; 
+}
+body > div > div.l-sidebar > ul > li > a{
+    font-size: 1rem;
+}
+
+.l-sidebar__profile-container {
+    display: flex; /* 横並びにする */
+    align-items: center; /* 縦方向の位置を揃える */
+    gap: 10px; /* 要素間のスペースを指定 */
+}
+
+.l-sidebar__profile {
+    display: flex; /* 子要素を扱いやすくするために設定（オプション） */
+    align-items: center; /* 子要素を中央揃え */
+}
+
+.l-sidebar__profileImage {
+    width: 50px; /* 画像の幅 */
+    height: 50px; /* 画像の高さ */
+    border-radius: 50%; /* 画像を丸くする（オプション） */
+    object-fit: cover;
+    margin-right: 8px; /* 画像とIDの間隔調整 */
+}
+
+#profile-username {
+    margin: 0; /* 不要な余白を削除 */
+}

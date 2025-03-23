@@ -7,20 +7,27 @@
   <meta name="expires" content="604800">
   <meta name="format-detection" content="email=no,telephone=no,address=no">
   <title>投稿作成</title>
-  <link rel="stylesheet" href="../css/app.css"> <!-- パスを修正 -->
-  <script src="../js/post_new.js" defer></script> <!-- パスを修正 -->
+  <link rel="stylesheet" href="../css/app.css">
+  <link rel="stylesheet" href="../css/sidebar_style.css">
+  <script src="../js/post_new.js" defer></script>
 </head>
 <body>
   <div class="l-wrapper">
     <div class="l-sidebar">
       <img class="l-sidebar__logo" src="../../images/Reach-logo.png" alt="">
-      <ul>
-        <li><a href="../../main/html/main.html">ホーム</a></li> <!-- パスを修正 -->
-        <li><a href="../html/posts_new.html">投稿作成</a></li> <!-- パスを修正 -->
+      <ul class="l-sidebar__link">
+          <li><a href="main.html">ホーム</a></li>
+          <li><a href="../../posts_new/html/posts_new.html">投稿作成</a></li>
       </ul>
-      <div class="l-sidebar__profile">
-        <img class="l-sidebar__profileImage" src="../../images/profile.png" alt="">
-        <p>プロフィール</p>
+      <div class="l-sidebar__profile-container">
+        <div class="l-sidebar__profile profileImage">
+          <img id="profile-image" class="l-sidebar__profileImage" src="../../images/sample.png" alt="Profile Image">
+        </div>
+        <a href="../../profile/html/profile.html" class="l-sidebar__profile-link">
+          <div class="l-sidebar__profile profileUserId">
+            <p id="profile-username">プロフィール</p>
+          </div>
+        </a>
       </div>
     </div>
     <div class="l-main">

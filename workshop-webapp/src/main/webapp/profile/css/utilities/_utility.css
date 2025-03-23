@@ -1,0 +1,17 @@
+.u-hidden { display: none !important; }
+
+@media screen and (min-width: 796px) { /* pc */
+  .u-hidden-pc {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 795px) { /* sp */
+  .u-hidden-sp {
+    display: none !important;
+  }
+}
+
+.u-mb-10 { margin-bottom: 10px !important; }
+
+
