@@ -8,6 +8,7 @@
   <meta name="format-detection" content="email=no,telephone=no,address=no">
   <title>投稿作成</title>
   <link rel="stylesheet" href="../css/app.css">
+  <link rel="stylesheet" href="../css/posts_new_style.css">
   <link rel="stylesheet" href="../css/sidebar_style.css">
   <script src="../js/post_new.js" defer></script>
 </head>
@@ -33,10 +34,14 @@
     <div class="l-main">
       <div class="p-post">
         <div class="p-post__form">
-          <div class="p-post__formUser">
-            <img class="p-post__formUser__image" src="../../images/profile.png" alt="ユーザープロフィール画像">
-            <span class="p-post__formUser__id">ユーザーID</span>
-          </div>
+	      <div class="main__profile-container">
+			<div class="main__profile profileImage">
+				<img id="post-userimage" class="p-post__formUser__image" src="../../images/profile.png" alt="ユーザープロフィール画像">
+			</div>
+			<div class="main__profile profileUserId">
+            	<span id="post-username" class="p-post__formUser__id">ユーザーID</span>
+			</div>
+	      </div>
           <form action="your-upload-endpoint" method="post">
             <div class="p-post__formImage">
               <label for="image-upload">画像を添付</label>

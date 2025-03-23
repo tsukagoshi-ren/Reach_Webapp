@@ -1,0 +1,21 @@
+.main__profile-container {
+    display: flex; /* 横並びにする */
+    align-items: center; /* 縦方向の位置を揃える */
+    gap: 10px; /* 要素間のスペースを指定 */
+}
+.main__profile {
+    display: flex; /* 子要素を扱いやすくするために設定（オプション） */
+    align-items: center; /* 子要素を中央揃え */
+}
+
+.p-post__formUser__image {
+    width: 50px; /* 画像の幅 */
+    height: 50px; /* 画像の高さ */
+    border-radius: 50%; /* 画像を丸くする（オプション） */
+    object-fit: cover;
+    margin-right: 8px; /* 画像とIDの間隔調整 */
+}
+
+#post-username {
+    margin: 0; /* 不要な余白を削除 */
+}
