@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
     formData.append('post_text', postText);
     
     // バックエンドへ送信
-    fetch('/api/posts', {  // 実際のAPIエンドポイントに変更してください
+    fetch('/api/registerPost', {  // 実際のAPIエンドポイントに変更してください
       method: 'POST',
       body: formData
     })
