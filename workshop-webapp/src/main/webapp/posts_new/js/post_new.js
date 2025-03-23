@@ -1,4 +1,34 @@
 document.addEventListener('DOMContentLoaded', function() {
+	
+	// 初期表示：プロフィール画像、ユーザーIDを取得
+	fetch("/profile")
+	.then(response => response.json())
+	.then(user => {
+		// サイドバーのプロフィール
+	    const profileImage = document.getElementById("profile-image");
+	    const profileUsername = document.getElementById("profile-username");
+	    
+	    // 投稿画面のプロフィール
+	    const postUserImage = document.getElementById("post-userimage");
+	    const postUsername = document.getElementById("post-username");
+	
+	    if (user.profilePicture) {
+	        // 空白を削除したユーザーIDでパスを構成
+	        const trimmedUserId = user.userId.trim(); // 空白を削除
+	        profileImage.src = `/images/profileImages/${trimmedUserId}/${user.profilePicture}`;
+	        postUserImage.src = `/images/profileImages/${trimmedUserId}/${user.profilePicture}`;
+	    } else {
+	        profileImage.src = "../../images/default-profile.png"; // デフォルト画像
+	    }
+	
+	    // 空白を削除してユーザーIDを表示
+	    profileUsername.textContent = user.userId.trim();
+	    postUsername.textContent = user.userId.trim();
+	})
+	.catch(error => {
+	    console.error("プロフィール情報の取得に失敗しました:", error);
+	});
+	
   // フォーム要素を取得
   const form = document.querySelector('.p-post__form form');
   
