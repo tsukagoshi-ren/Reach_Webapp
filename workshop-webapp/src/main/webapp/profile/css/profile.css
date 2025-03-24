@@ -82,6 +82,8 @@
 	margin-left: 117px;
 	margin-top: 38px;
 	float: left;
+    border-radius: 50%; /* 画像を丸くする（オプション） */
+    object-fit: cover;
 }
 
 #userId_textbox {

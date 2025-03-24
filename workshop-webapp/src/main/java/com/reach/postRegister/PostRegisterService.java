@@ -1,4 +1,4 @@
-package com.reach.post;
+package com.reach.postRegister;
 
 import java.io.IOException;
 import java.nio.file.Files;
