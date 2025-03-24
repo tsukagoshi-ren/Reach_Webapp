@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
 	
 	// 初期表示：プロフィール画像、ユーザーIDを取得
-	fetch("/profile")
+	fetch("/sidebarProfile")
 	.then(response => response.json())
 	.then(user => {
 		// サイドバーのプロフィール

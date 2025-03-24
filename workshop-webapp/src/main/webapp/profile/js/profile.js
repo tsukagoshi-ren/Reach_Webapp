@@ -1,30 +1,61 @@
 // 初期表示
-document.addEventListener("DOMContentLoaded", function() {
-	// プロフィール画像を取得して表示
-	fetch("/profile")
-		.then(response => response.json())
-		.then(user => {
-			const sidebar_profileImage = document.getElementById("sidebar_profileImage");
-			const sidebar_profileUseriD = document.getElementById("sidebar_profileUserId");
-			const profile_image = document.getElementById("profile_image");
-			const prpfile_userId = document.getElementById("prpfile_userId");
-
-			if (user.profilePicture) {
-				sidebar_profileImage.src = `/workshop-webapp/src/main/webapp/images/${user.profilePicture}`; // ログインしているユーザーのプロフィール画像を表示
-				profile_image.src = `/workshop-webapp/src/main/webapp/images/${user.profilePicture}`; // ログインしているユーザーのプロフィール画像を表示
-			} else {
-				sidebar_profileImage.src = "/workshop-webapp/src/main/webapp/images/profile.png"; // 初期表示の画像
-				profile_image.src = "/workshop-webapp/src/main/webapp/images/profile.png"; // 初期表示の画像
-			}
-			if (user.userId) {
-				sidebar_profileUseriD.textContent = user.userId; // ログインしているユーザーIDを表示
-				prpfile_userId.textContent = user.userId; // ログインしているユーザーIDを表示
-			} else {
-				sidebar_profileUseriD.textContent = "プロフィール"; // 初期表示の文字列
-				prpfile_userId.textContent = "ユーザーID"; // 初期表示の文字列
-			}
-
-		});
+//document.addEventListener("DOMContentLoaded", function() {
+//	// プロフィール画像を取得して表示
+//	fetch("/profile")
+//		.then(response => response.json())
+//		.then(user => {
+//			const sidebar_profileImage = document.getElementById("sidebar_profileImage");
+//			const sidebar_profileUseriD = document.getElementById("sidebar_profileUserId");
+//			const profile_image = document.getElementById("profile_image");
+//			const prpfile_userId = document.getElementById("prpfile_userId");
+//
+//			if (user.profilePicture) {
+//				sidebar_profileImage.src = `/workshop-webapp/src/main/webapp/images/${user.profilePicture}`; // ログインしているユーザーのプロフィール画像を表示
+//				profile_image.src = `/workshop-webapp/src/main/webapp/images/${user.profilePicture}`; // ログインしているユーザーのプロフィール画像を表示
+//			} else {
+//				sidebar_profileImage.src = "/workshop-webapp/src/main/webapp/images/profile.png"; // 初期表示の画像
+//				profile_image.src = "/workshop-webapp/src/main/webapp/images/profile.png"; // 初期表示の画像
+//			}
+//			if (user.userId) {
+//				sidebar_profileUseriD.textContent = user.userId; // ログインしているユーザーIDを表示
+//				prpfile_userId.textContent = user.userId; // ログインしているユーザーIDを表示
+//			} else {
+//				sidebar_profileUseriD.textContent = "プロフィール"; // 初期表示の文字列
+//				prpfile_userId.textContent = "ユーザーID"; // 初期表示の文字列
+//			}
+//
+//		});
+//});
+document.addEventListener('DOMContentLoaded', function() {
+	
+	// 初期表示：プロフィール画像、ユーザーIDを取得
+	fetch("/sidebarProfile")
+	.then(response => response.json())
+	.then(user => {
+		// サイドバーのプロフィール
+	    const profileImage = document.getElementById("profile-image");
+	    const profileUsername = document.getElementById("profile-username");
+	    
+	    // プロフィール画面のプロフィール
+	    const userImage = document.getElementById("profile_image");
+	    const username = document.getElementById("prpfile_userId");
+	
+	    if (user.profilePicture) {
+	        // 空白を削除したユーザーIDでパスを構成
+	        const trimmedUserId = user.userId.trim(); // 空白を削除
+	        profileImage.src = `/images/profileImages/${trimmedUserId}/${user.profilePicture}`;
+	        userImage.src = `/images/profileImages/${trimmedUserId}/${user.profilePicture}`;
+	    } else {
+	        profileImage.src = "../../images/default-profile.png"; // デフォルト画像
+	    }
+	
+	    // 空白を削除してユーザーIDを表示
+	    profileUsername.textContent = user.userId.trim();
+	    username.textContent = user.userId.trim();
+	})
+	.catch(error => {
+	    console.error("プロフィール情報の取得に失敗しました:", error);
+	});
 });
 
 // Spring Boot APIのURL

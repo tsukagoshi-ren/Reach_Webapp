@@ -41,7 +41,7 @@ public class MainController {
         return response;
     }
     
-    @GetMapping("/profile")
+    @GetMapping("/sidebarProfile")
     public User getUserProfile(HttpSession session) {
         String userId = (String) session.getAttribute("userId");
         logger.info("Fetching profile for user_id: {}", userId);

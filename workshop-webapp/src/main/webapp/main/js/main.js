@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    fetch("/profile")
+    fetch("/sidebarProfile")
         .then(response => response.json())
         .then(user => {
             const profileImage = document.getElementById("profile-image");
