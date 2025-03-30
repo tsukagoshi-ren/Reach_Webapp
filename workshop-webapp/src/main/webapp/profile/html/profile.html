@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="../css/app.css">
 	<link rel="stylesheet" href="../css/profile.css">
     <link rel="stylesheet" href="../css/sidebar_style.css">
-	<script src="../js/profile.js" defer></script> <!-- 追加 -->
+	<script src="../js/profile.js" defer></script>
 	<title>プロフィール画面</title>
 </head>
 <body>
@@ -34,21 +34,25 @@
 			<div class="profile">
 				<img id="profile_image" class="profile_profileImage" src="../../images/sample.png" alt="">
 				<div class="profilebox">
-					<span id="prpfile_userId">ユーザーID</span>
+					<span id="prpfile_userId"></span>
 					<button id="profile_editButton" type="submit">編集</button>
 				</div>
 			</div>
-			<div class="profileEdit">
-				<label for="uploadProfileImage">
-					<img src="../../images/uploadIcon.png" alt="アイコン" id="uploadButton">
-				</label>
-				<input type="file" id="uploadProfileImage" name="newProfileImage" accept="image/*" hidden>
-				<input id="userId_textbox" type="text" name="userId" placeholder="ユーザーID">
-				<div>
-					<button id="profileEdit_cancelBtn" type="submit">キャンセル</button>
-					<button id="profileEdit_adaptBtn" type="submit">適応</button>
+		    <form id="profileEditForm">
+				<div class="profileEdit">
+					<label for="uploadProfileImage">
+						<img src="../../images/uploadIcon.png" alt="アイコン" id="uploadButton">
+					</label>
+					<input type="file" id="uploadProfileImage" name="newProfileImage" accept="image/*" hidden>
+					<div class = "profileEdit_userId">
+						<span id="prpfile_userId_edit"></span>
+					</div>
+					<div>
+						<button id="profileEdit_cancelBtn" type="submit">キャンセル</button>
+						<button id="profileEdit_adaptBtn" type="submit">適応</button>
+					</div>
 				</div>
-			</div>
+		    </form>
 		</div>
 	</div>
 </body>

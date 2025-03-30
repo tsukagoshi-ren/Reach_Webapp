@@ -46,7 +46,8 @@
 	float: left;
 }
 
-#prpfile_userId {
+#prpfile_userId,
+#prpfile_userId_edit {
 	width: 158px;
 	height: 64px;
 	margin-top: 38px;
@@ -74,6 +75,10 @@
 	height: 226px;
 	margin-top: 117px;
 	margin-left: 70px;
+}
+
+.profileEdit_userId{
+	display: flex;
 }
 
 #uploadButton {
