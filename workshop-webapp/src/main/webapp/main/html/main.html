@@ -37,11 +37,34 @@
         </div>
         <div class="l-main">
             <div id="posts">
-                <!-- 投稿の一覧がここに表示される -->
+                <div class="p-post">
+                    <div class="p-post__list">
+                        <div class="p-post__listUser">
+                            <div class="p-post__listUser__name" data-user>投稿者: </div>
+                            <p data-time></p>
+                        </div>
+                        <img class="p-post__listImage" data-image src="" alt="Post Image">
+                        <div class="p-post__listLike">
+                            <img class="like-button" src="../../images/like.png" alt="いいね" width="30" height="30">
+                            <span class="like-count" data-like-count></span>
+                        </div>
+                    </div>
+                    <div class="p-post__comment" style="display: none;">
+                        <div class="p-post__commentList">
+                            <h3>コメント一覧</h3>
+                            <p>コメント1</p>
+                            <p>コメント2</p>
+                            <p>コメント3</p>
+                        </div>
+                        <input type="text" class="commentInput" placeholder="コメントを書く">
+                        <button class="commentButton">コメント</button>
+                        <p class="commentMessage"></p>
+                    </div>
+                </div>
             </div>
             <p id="no-posts-message" style="display: none;">投稿がありません</p>
             <ul class="c-pagination" id="pagination"></ul>
-        </div>
+        </div>        
     </div>
 </body>
 </html>
