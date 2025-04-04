@@ -52,7 +52,7 @@ public class MainService {
                      "u.profile_picture as user_profile_picture " +
                      "FROM public.POST_INFO p " +
                      "JOIN public.USER_INFO u ON TRIM(p.post_user) = TRIM(u.user_id) " +
-                     "ORDER BY p.post_time DESC";
+                     "ORDER BY p.post_time ASC";
                      
         return namedParameterJdbcTemplate.query(sql, new RowMapper<Map<String, Object>>() {
             @Override
