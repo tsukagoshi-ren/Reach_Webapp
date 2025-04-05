@@ -9,31 +9,52 @@
     <title>メインページ</title>
     <meta name="description" content="【カリキュラム番号】| 【カリキュラム名】のdescriptionです">
     <link rel="stylesheet" href="../css/app.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/sidebar_style.css">
     <script src="../js/main.js" defer></script>
     <script src="../js/like.js" defer></script>
-    <script src="../js/pagination.js" defer></script>
-    <script src="../js/post.js" defer></script>
 </head>
 <body>
     <div class="l-wrapper">
         <div class="l-sidebar">
             <img class="l-sidebar__logo" src="../../images/Reach-logo.png" alt="">
-            <ul>
-                <li><a href="main.html">ホーム</a></li>
-                <li><a href="../../posts_new/html/posts_new.html">投稿作成</a></li> <!-- パスを修正 -->
+            <ul class="l-sidebar__link">
+                <li><a href="../../main/html/main.html">ホーム</a></li>
+                <li><a href="../../postResister/html/postResister.html">投稿作成</a></li>
             </ul>
-            <div class="l-sidebar__profile">
-                <img id="profile-image" class="l-sidebar__profileImage" src="../../images/default-profile.png" alt="Profile Image">
-                <p id="profile-username">プロフィール</p>
+            <div class="l-sidebar__profile-container">
+                <div class="l-sidebar__profile profileImage">
+                    <img id="profile-image" class="l-sidebar__profileImage" src="../../images/sample.png" alt="Profile Image">
+                </div>
+                <a href="../../profile/html/profile.html" class="l-sidebar__profile-link">
+                    <div class="l-sidebar__profile profileUserId">
+                        <p id="profile-username">プロフィール</p>
+                    </div>
+                </a>
             </div>
         </div>
         <div class="l-main">
             <div id="posts">
-                <!-- 投稿の一覧がここに表示される -->
+                <div class="p-post" style="display: none;">
+                    <div class="p-post__list">
+                        <div class="p-post__listUser">
+                            <div class="p-post__listUser__name" data-user>投稿者: </div>
+                            <p data-time></p>
+                        </div>
+                        <img class="p-post__listImage" data-image src="" alt="Post Image">
+                        <div class="p-post__listLike">
+                            <img class="like-button" src="../../images/like.png" alt="いいね" width="30" height="30">
+                            <span class="like-count" data-like-count></span>
+                        </div>
+                        <p class="p-post__text" data-text></p> 
+                    </div>
+                    <!-- コメント機能実装 -->
+
+
+                </div>
             </div>
             <p id="no-posts-message" style="display: none;">投稿がありません</p>
-            <ul class="c-pagination" id="pagination"></ul>
-        </div>
+        </div>        
     </div>
 </body>
 </html>

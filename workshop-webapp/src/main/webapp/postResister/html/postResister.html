@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="expires" content="604800">
+  <meta name="format-detection" content="email=no,telephone=no,address=no">
+  <title>投稿作成</title>
+  <link rel="stylesheet" href="../css/app.css">
+  <link rel="stylesheet" href="../css/postResister_style.css">
+  <link rel="stylesheet" href="../css/sidebar_style.css">
+  <script src="../js/postResister.js" defer></script>
+</head>
+<body>
+  <div class="l-wrapper">
+    <div class="l-sidebar">
+        <img class="l-sidebar__logo" src="../../images/Reach-logo.png" alt="">
+        <ul class="l-sidebar__link">
+            <li><a href="../../main/html/main.html">ホーム</a></li>
+            <li><a href="../../postResister/html/postResister.html">投稿作成</a></li>
+        </ul>
+		<div class="l-sidebar__profile-container">
+		    <div class="l-sidebar__profile profileImage">
+		        <img id="profile-image" class="l-sidebar__profileImage" src="../../images/sample.png" alt="Profile Image">
+            </div>
+			<a href="../../profile/html/profile.html" class="l-sidebar__profile-link">
+			    <div class="l-sidebar__profile profileUserId">
+			        <p id="profile-username">プロフィール</p>
+			    </div>
+			</a>
+		</div>
+    </div>
+    <div class="l-main">
+      <div class="p-post">
+        <div class="p-post__form">
+	      <div class="main__profile-container">
+			<div class="main__profile profileImage">
+				<img id="post-userimage" class="p-post__formUser__image" src="../../images/profile.png" alt="ユーザープロフィール画像">
+			</div>
+			<div class="main__profile profileUserId">
+            	<span id="post-username" class="p-post__formUser__id">ユーザーID</span>
+			</div>
+	      </div>
+          <form action="your-upload-endpoint" method="post">
+            <div class="p-post__formImage">
+              <label for="image-upload">画像を添付</label>
+              <input type="file" id="image-upload" name="image">
+            </div>
+            <div class="p-post__formText">
+              <textarea id="post-text" name="post-text" placeholder="ここにテキストを入力"></textarea>
+            </div>
+            <div class="p-post__formButtons">
+              <input type="reset" value="キャンセル">
+              <button type="submit">投稿する</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

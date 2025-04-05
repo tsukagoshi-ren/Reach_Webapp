@@ -1,0 +1,52 @@
+.p-post {
+  padding: 30px;
+  border: 0.5px solid white;
+  margin-bottom: 20px;
+}
+/* 投稿一覧 */
+.p-post__list {
+  display: flex;
+  flex-direction: column;
+}
+.p-post__list:not(:last-child) {
+  margin-bottom: 20px;
+}
+.p-post__listUser {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.p-post__listUser__image {
+  margin-right: 8px;
+}
+.p-post__listLike {
+  display: flex;
+}
+
+/* 投稿作成 */
+.p-post__form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  color: white;
+}
+.p-post__formUser {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.p-post__formUser__image {
+  margin-right: 8px;
+}
+.p-post__formImage {
+  margin-bottom: 30px;
+}
+.p-post__formText {
+  margin-bottom: 20px;
+}
+.p-post__formText textarea {
+  width: 100%; 
+  height: 350px;
+  box-sizing: border-box;
+}
+
