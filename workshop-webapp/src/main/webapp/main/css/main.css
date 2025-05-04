@@ -1,0 +1,35 @@
+.p-post {
+	gap: 40px;
+    padding: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    color: white;
+}
+/* 投稿一覧 */
+.p-post__list {
+    padding: 30px;
+    width: 650px;
+    border: 0.5px solid rgba(255, 255, 255, 0.354);
+}
+.p-post__list:not(:last-child) {
+    margin-bottom: 20px;
+}
+.p-post__listUser {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.p-post__listUser__image {
+    margin-right: 8px;
+}
+.p-post__listImage {
+    display: block; 
+    margin: 0 auto 20px; 
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px; 
+}
+.p-post__listLike {
+    display: flex;
+}

@@ -1,0 +1,8 @@
+.l-main {
+  width: 80%;
+  margin-left: 20%;
+  padding: 80px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
